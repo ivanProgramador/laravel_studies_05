@@ -1,0 +1,6 @@
+Query Builders 
+
+São um conjunto de classes e metodos criados com o objetivo de facilitar a interação,
+com a base de dados sem o uso de queryes sql de forma direta, basicasimente se trata 
+de uma abstração.
+    
