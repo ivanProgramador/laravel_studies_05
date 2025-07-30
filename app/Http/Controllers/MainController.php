@@ -8,44 +8,35 @@ use Illuminate\Support\Facades\DB;
 class MainController extends Controller
 {
     public function index(){
-       
-       //devolvendo todos os dados da tabela  
-       // $clients = DB::table('clients')->get();
 
-       //apresentando dados em um array associativo 
-       //$clients = DB::table('clients')->get()->toArray();
+      //select usando o where no caso abaixo eu quero selecionar o porduto cujo o id e 10 
+      //$products = DB::table('products')->where('id',10)->get();
 
-       //apresentando dados em um array de arrays associativos 
-       // $clients = DB::table('clients')->get()->map(function($item){
-       //    return (array) $item });
+      //agora eu faço um teste logico onde eu quero selecionar varirios produtos com o id igual maior que 10 
+      // $products = DB::table('products')->where('id','>=',10)->get();
 
-       //apresentando dados apartir dos resulttados
-       //   $products = DB::table('products')->get();
-       //   foreach($products as $product){
-       //      echo $product->product_name.'<br>';
-       //  }
+      // selecionando produtos com o valor maior que 50,00
+      // $products = DB::table('products')
+      //              ->where('price','>',50)
+      //              ->get();
+      //
 
-       //obter apenas algumas coluna, no caso abaixo eu so quero nome e preço 
-       // $products = DB::table('products')->get(['product_name','price']);
-       // $this->showTableData($products);
+     //selecionando os produtos que tem o valor maioro ou igual a 50 e que comecem com a letra a  
+     //  $products = DB::table('products')
+     //               ->where('price','>',50)
+     //               ->where('product_name','like','A%')
+     //               ->get();
 
-       //obter somente a primeira linha do resultado 
-       //$products = DB::table('products')->get()->first();
+      
+      
 
-       // //obter somente a ultima linha do resultado 
-      // $products = DB::table('products')->get()->last();
-
-       $this->showRawData($products);
-
-       
+    
+      
+      
 
 
-       
-       
-       
-
-
-       
+      
+       $this->showTableData($products);
 
     }
 
