@@ -9,9 +9,43 @@ class MainController extends Controller
 {
     public function index(){
 
-       $products = DB::table('products')->where('')->get();
+    
 
-       $this->showTableData($products);
+    /* 
+       $count = DB::table('products')->count();
+       $max_price = DB::table('products')->max('price');
+       $min_price = DB::table('products')->min('price');
+       $avg_price = DB::table('products')->avg('price');
+       $sum_prices = DB::table('products')->sum('price');
+    
+       echo'<pre>';
+       print_r([
+         'count' =>$count,
+         'max_price'=> $max_price,
+         'min_price'=> $min_price,
+         'avg_price'=> $avg_price,
+         'sum_prices'=> $avg_price,
+        ]);
+        echo'</pre>';
+      */  
+       
+     
+
+     //usando o order by para controlar a aordem dos resultados 
+
+     $resultados = DB::table('products')
+                   ->orderBy('price','desc')
+                   ->limit(3)
+                   ->get();
+
+    $this->showTableData($resultados);
+
+    
+
+
+
+
+
 
     }
 

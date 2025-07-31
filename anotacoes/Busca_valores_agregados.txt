@@ -1,0 +1,7 @@
+Valores agregados são a soma de pordutos , contagem, media entre outros 
+
+ $count = DB::table('products')->count();
+ $max_price = DB::table('products')->max('price');
+ $min_price = DB::table('products')->min('price');
+ $avg_price = DB::table('products')->avg('price');
+ $sum_prices = DB::table('products')->sum('prices');
