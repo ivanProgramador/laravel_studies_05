@@ -1,0 +1,50 @@
+ //insert
+        //adicionar um novo cliente
+
+        /* 
+            $new_client = [
+            'client_name'=>'Ivan José',
+            'email' => 'ivan.teste@teste.com'
+
+            ];
+
+            DB::table('clients')->insert($new_client);
+        */
+
+        /*
+          //usando o array de  forma  direta 
+
+            DB::table('clients')->insert([
+            'client_name'=>'Ivan José 2',
+            'email' => 'ivan2.teste2@teste.com'
+
+            ]);
+          */
+
+
+
+
+ /*
+             //inserindo em massa
+            */
+
+                DB::table('clients')->insert([
+                  [
+                   'client_name'=>'Ivan José 2',
+                    'email' => 'ivan2.teste2@teste.com'
+                  ],
+                  [
+                   'client_name'=>'Ana',
+                    'email' => 'ana.teste@teste.com'
+                  ],
+                  [
+                   'client_name'=>'Bruna',
+                    'email' => 'bruna.teste@teste.com'
+                  ],
+                  [
+                   'client_name'=>'Carla',
+                    'email' => 'carla.teste@teste.com'
+                  ],
+
+
+            ]);

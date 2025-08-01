@@ -1,0 +1,12 @@
+ 
+ O where é uma função  que nesse caso pesquisa o campo 
+ e compara com o segundo parametro isso traz o registro 
+ com o id=1 e depois disso ele executa a alteração
+ com base nos dados que estão dentro do array.    
+ 
+ DB::table('clients')
+            ->where('id',1)
+            ->update([
+                'client_name' =>'alterado',
+                'email'=>'alterado@gmal.com'
+ ]);
